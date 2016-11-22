@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- my StarField -->
+<html>
+	<head>
+
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<title>Reid's Starfield</title>
+		<style>
+		body {
+				margin: 0px;
+				padding: 0px;
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				background-color: #000;
+				color: #bbbbbb;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-family: 'Lato', sans-serif;
+			}
+		h4 {
+		font-weight: 400;
+		}
+		p {
+			font-family: 'Lato';
+			color: white;
+		}
+		#container {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: -1;
+		}
+		#infobox p {
+			font-size: 11px;
+			vertical-align: middle;
+		}
+		#infobox {
+			background-color: rgba(180, 180, 180, 0.2);
+			width: 50%;
+			height: 40%;
+			margin: auto;
+			color: white;
+			vertical-align: middle;
+			padding: 10px 20px 20px 20px;
+		}
+		.ghmark {
+			margin-top: 15px;
+		}
+		</style>
+	</head>
+	<body>
+		<!-- this is the starfield container -->
+		<div id="container"></div>
+		<div id="infobox">
+			<h1>Reid's Starfield Project</h1>
+			<h4>I am an aspiring full-stack web developer current working full time doing only WordPress and front-end and working tirelessly to grow my skills towards a full-stack path.</h4>
+			<p>This is a project I did based on a tutorial found here:
+				<a href="http://www.codeproject.com/Articles/642499/Learn-JavaScript-Part-Create-a-Starfield" target="_blank">codeproject.com</a>
+			</p>
+			<p>This project covered the prototype and class system in JavaScript pretty well, and taught me several new things I had not previously known or quite fully understood yet.</p>
+			<a href="https://github.com/Drazyhaze" target="_blank"><img class="ghmark" src="githubmark.png"></a>
+		</div>
+		<script src="starfield.js"></script>
+		<script>
+		var container = document.getElementById('container');
+		var starfield = new Starfield();
+		starfield.initialise(container);
+		starfield.start();
+		</script>
+	</body>
+</html>
